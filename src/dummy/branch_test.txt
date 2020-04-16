@@ -1,2 +1,38 @@
 added for branch check
 2
+
+Step 1: Create branch
+
+git branch "branch_name"
+
+Step 2: Go to created branch
+
+git checkout "branch_name"
+
+- Add any new features to the new branch and push it to github using below command
+git commit -m files
+git push -u origin newbranchname
+
+Now the branch is synced on github online repo
+
+Step 3: Come back to origin/master
+
+git checkout master
+
+Step 4: After updates or new features added to branch there is a need to commit our new changes
+to master branch from new branch
+
+- first go to master branch
+git checkout master
+
+- then merge the new branch with master branch
+git merge "branch_name"
+
+Step 5: Push the updated master again
+git push -u origin master
+
+Step 6: Delete the unnecessary branch from local git
+git branch -d "branch_name"
+
+Step 7: Delete branch from online github repo
+git push origin --delete branch_name
